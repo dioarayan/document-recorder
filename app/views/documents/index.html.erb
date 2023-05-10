@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Documents</h1>
+
+<div id="documents">
+  <div class="list-group" id="document_list">
+    <% @documents.each do |document| %>
+      <%= render document %>
+    <% end %>
+  </div>  
+</div>
+
+<%= link_to "New document", new_document_path, data: {controller: 'document-modal'} %>
